@@ -1,7 +1,7 @@
-// Import the MySQL connection object
+// Import MySQL 
 var connection = require ('./connection.js');
 
-// Helper function for generating MySQL syntax
+// Helper function for making MySQL syntax
 function printQuestionMarks(num) {
 	var arr = [];
 
@@ -12,7 +12,7 @@ function printQuestionMarks(num) {
 	return arr.toString();
 }
 
-// Helper function for generating My SQL syntax
+// Helper function for making My SQL syntax
 function objToSql(ob) {
 	var arr = [];
 
@@ -23,30 +23,30 @@ function objToSql(ob) {
 	return arr.toString();
 }
 
-// Create the ORM object to perform SQL queries
+// Add ORM object to perform SQL queries
 var orm = {
 
-	// Function that returns all table entries
+	// Function to return table entries
 	selectAll: function(tableInput, cb) {
 
-		// Construct the query string that returns all rows from the target table
+		// Construct the query string that returns the rows 
 		var queryString = "SELECT * FROM " + tableInput + ";";
 
-		// Perform the database query
+		// Database query
 		connection.query(queryString, function(err, result) {
 			if (err) {
 				throw err;
 			}
 
-			// Return results in callback
+			// Callback
 			cb(result);
 		});
 	},
 
-	// Function that insert a single table entry
+	// Insert a single table entry
 	insertOne: function(table, cols, vals, cb) {
 
-		// Construct the query string that inserts a single row into the target table
+		// Add query string that inserts a single row 
 		var queryString = "INSERT INTO " + table;
 
 		queryString += " (";
@@ -58,21 +58,21 @@ var orm = {
 
 		console.log(queryString);
 
-		// Perform the database query
+		// Database query
 		connection.query(queryString, vals, function(err, result) {
 			if (err) {
 				throw err;
 			}
 
-			// Return results in callback
+			// Callback
 			cb(result);
 		});
 	},
 
-	// Function that updates a single table entry
+	// Update a single table entry
 	updateOne: function(table, objColVals, condition, cb) {
 
-		// Construct the query string that updates a single entry in the target table
+		// Construct the query string that updates the target table
 		var queryString = "UPDATE " + table;
 
 		queryString += " SET ";
@@ -82,17 +82,17 @@ var orm = {
 
 		console.log(queryString);
 
-		// Perform the database query
+		// Database query
 		connection.query(queryString, function(err, result) {
 			if (err) {
 				throw err;
 			}
 
-			// Return results in callback
+			// Callback
 			cb(result);
 		});
 	}
 };
 
-// Export the orm object for use in other modules
+// Export the orm object 
 module.exports = orm;

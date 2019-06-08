@@ -1,7 +1,7 @@
-// Pull in required dependencies
+// Pull in dependencies
 var mysql = require('mysql');
 
-// Create the MySQL connection object
+// Add MySQL connection object
 var connection;
 
 if (process.env.JAWSDB_URL) {
@@ -21,7 +21,7 @@ else {
 	})
 };
 
-// Make the connection to MySQL
+// Connect to MySQL
 connection.connect(function(err) {
   if (err) {
     console.error('ERROR CONNECTING' + err.stack + '\n\n');

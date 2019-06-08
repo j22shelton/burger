@@ -1,9 +1,12 @@
-<center><img src="https://www.muraldecal.com/en/img/mag309-jpg/folder/products-listado-merchanthover/wall-stickers-for-kids-hamburger.jpg alt="burger" height="200" width="200"></center>
+<center><img src="https://www.muraldecal.com/en/img/mag309-jpg/folder/products-listado-merchanthover/wall-stickers-for-kids-hamburger.jpg alt="burger" height="250" width="250"></center>
 
 <center><h1>Eat-Da-Burger!</h1></center>
 
-<main>
-  <div class="container">
+
+  <hr>
+  <h5>Click on the Burger to Devour it!</h5>
+  <hr>
+
     <div class="row">
       <div class="col-md-6">
         {{#each burgers}}
@@ -16,7 +19,9 @@
           {{/unless}}
         {{/each}}
       </div>
+  </div>
 
+<right>
       <div class="col-md-6">
         {{#each burgers}}
           {{#if this.devoured}}
@@ -29,16 +34,22 @@
         {{/each}}
       </div>
     </div>
-  </div>
-</main>
+ 
+</right>
 
-<center><h4>Enter the burger you want to eat & hit the button!</h4></center>
+<center><h3>Add a Burger below!</h3>
 
 <div class="row">
-  <div class="col-md-12">
+  <div class="col s12">
     <form action="/burgers" method="POST">
-      <input type="text" id="name" name="burger_name" placeholder="Type Here">
-      <button type="submit" class="addBurgerButton">Add A Burger</button>
+     
+      <div class="form-group input-field">
+								<label class="red-text text-darken-1" for="bg">Type your burger here:</label>
+								<input type="text" id="bg" name="name">
+            
+							</div>
+      <button type="submit" class="addBurgerButton">Add Burger</button>
     </form>
   </div>
 </div>
+</center>

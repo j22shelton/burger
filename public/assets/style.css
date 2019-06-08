@@ -1,1 +1,8 @@
 body {background-color: gold;}
+
+.burgerEaten {
+    text-align: right;
+    border-radius: 25px;
+    margin: 25px;
+    font: bold;
+}

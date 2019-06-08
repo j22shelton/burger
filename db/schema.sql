@@ -1,8 +1,8 @@
--- Create the burgers_db database --
+-- Create burgers_db database
 CREATE DATABASE burgers_db;
 USE burgers_db;
 
--- Create a burgers table with the required fields --
+-- Create a burgers table
 CREATE TABLE burgers
 (
 	id int NOT NULL AUTO_INCREMENT,

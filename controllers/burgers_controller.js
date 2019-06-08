@@ -1,11 +1,11 @@
-// Pull in required dependencies
+// Pull in dependencies
 var express = require('express');
 var router = express.Router();
 
-// Import the model 
+// Import model 
 var burger = require('../models/burger.js');
 
-// Create routes 
+// Add routes 
 router.get('/', function(req, res) {
   burger.selectAll(function(data) {
     var hbsObject = {
