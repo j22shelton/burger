@@ -13,4 +13,6 @@ The app uses MySQL, Node, Express, Handlebars and ORM. It is deployed through He
 ## Deployed Link:
 
  - [Eat-Da-Burger](https://rocky-crag-98139.herokuapp.com)
+ 
+  ![](/public/assets/burger.png?raw=true)
 
